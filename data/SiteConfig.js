@@ -10,7 +10,7 @@ const config = {
   siteRssTitle: "ngraton's workshop RSS feed", // Title of the RSS feed
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
   dateFormat: "DD/MM/YYYY", // Date format for display.
-  postsPerPage: 4, // Amount of posts displayed per listing page.
+  postsPerPage: 0, // Amount of posts displayed per listing page.
   userName: "ngraton", // Username to display in the author segment.
   userEmail: "mail@ngraton.dev", // Email used for RSS feed's author segment
   userLocation: "Cleveland, Ohio", // User location to display in the author segment.
