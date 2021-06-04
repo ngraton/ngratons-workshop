@@ -3,19 +3,16 @@ import {
   FacebookShareButton,
   LinkedinShareButton,
   TwitterShareButton,
-  TelegramShareButton,
   RedditShareButton,
   FacebookShareCount,
   RedditShareCount,
   FacebookIcon,
   TwitterIcon,
-  TelegramIcon,
   LinkedinIcon,
   RedditIcon,
 } from "react-share";
 import urljoin from "url-join";
 import config from "../../../data/SiteConfig";
-import "./SocialLinks.css";
 
 function SocialLinks({ postNode, postPath, mobile }) {
   const post = postNode.frontmatter;
@@ -50,9 +47,6 @@ function SocialLinks({ postNode, postPath, mobile }) {
       >
         <LinkedinIcon round size={iconSize} />
       </LinkedinShareButton>
-      <TelegramShareButton url={url}>
-        <TelegramIcon round size={iconSize} />
-      </TelegramShareButton>
     </div>
   );
 }
