@@ -8,8 +8,6 @@
 
 The Digital Workshop of Nic Graton.
 
-## Features
-
 # Author
 
 Nic Graton [ngraton](https://ngraton.dev)
