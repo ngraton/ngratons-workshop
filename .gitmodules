@@ -1,0 +1,3 @@
+[submodule "workshop-talk"]
+	path = workshop-talk
+	url = git@github.com:ngraton/workshop-talk.git
