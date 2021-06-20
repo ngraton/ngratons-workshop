@@ -1,0 +1,365 @@
+@import url("https://use.typekit.net/dqk5aui.css");
+
+:root {
+  --border: 4px;
+  --clip: polygon(0 0, 100% 0, 100% 100%, 95% 100%, 8% 100%, 0 70%);
+  --clip-one: polygon(0 2%, 100% 2%, 100% 95%, 95% 95%, 95% 90%, 85% 90%, 85% 95%, 8% 95%, 0 70%);
+  --clip-two: polygon(0 78%, 100% 78%, 100% 100%, 95% 100%, 8% 100%, 0 78%);
+  --clip-three: polygon(0 44%, 100% 44%, 100% 54%, 95% 54%, 95% 54%, 85% 54%, 85% 54%, 8% 54%, 0 54%);
+  --clip-four: polygon(0 0, 100% 0, 100% 0, 95% 0, 95% 0, 85% 0, 85% 0, 8% 0, 0 0);
+  --clip-five: polygon(0 0, 100% 0, 100% 0, 95% 0, 95% 0, 85% 0, 85% 0, 8% 0, 0 0);
+  --clip-six: polygon(0 40%, 100% 40%, 100% 85%, 95% 85%, 95% 85%, 85% 85%, 85% 85%, 8% 85%, 0 70%);
+  --clip-seven: polygon(0 63%, 100% 63%, 100% 80%, 95% 80%, 95% 80%, 85% 80%, 85% 80%, 8% 80%, 0 70%);
+  --color: hsl(0, 0%, 100%);
+  --font-size: 26px;
+  --label-size: 9px;
+  --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 1%));
+  --primary-hue: 269;
+  --primary-lightness: 35;
+  --shadow-primary: hsl(var(--shadow-primary-hue), 100%, 50%);
+  --shadow-primary-hue: 269;
+  --shadow-secondary: hsl(var(--shadow-secondary-hue), 100%, 50%);
+  --shadow-secondary-hue: 60;
+  --shimmy-distance: 5;
+}
+
+html {
+  background-color: #010101;
+}
+
+.about {
+  height: 100vh;
+  width: 100vw;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #fefefe;
+  text-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  font-family: lores-12-bold-alt-oakland, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.about-div {
+  color: #fefefe;
+  font-family: lores-12-bold-alt-oakland, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2rem;
+  position: relative;
+  text-shadow: 0 3px 5px rgba(179, 173, 173, 0.473);
+  transition: background 0.2s;
+
+}
+
+.about-text:hover {
+  --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 0.8%));
+}
+
+.about-text:after,
+.about-text:before {
+  bottom: 0;
+  clip-path: var(--clip);
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.about-text:before {
+  background: var(--shadow-primary);
+  transform: translate(var(--border), 0);
+}
+
+.about-text:after {
+  background: var(--primary);
+}
+
+.picture-shadow,
+.me {
+  animation-duration: 3s;
+  animation-fill-mode: backwards;
+  animation-timing-function: cubic-bezier(0, 0.5, 0.25, 1.25);
+  display: block;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.picture {
+  padding-top: 100%;
+  position: relative;
+  width: 100%
+}
+
+.me {
+  animation-delay: 2500ms;
+  animation-name: picImage;
+  border-radius: 3333360px;
+  position: absolute;
+}
+
+.picture-shadow {
+  animation-delay: 1800ms;
+  animation-name: picShadow;
+  border-radius: 3333360px;
+  background-image: radial-gradient(rgb(90, 82, 82) 5%, rgba(197, 195, 195, 0.596) 70%);
+  left: 2%;
+  position: absolute;
+  top: 2%;
+}
+
+.about-text {
+  animation: glitch 4s 2;
+  overflow-x: visible;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 800px) {
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    justify-content: space-evenly;
+    padding: 1rem;
+    max-width: 800px;
+    margin: calc((100vh - (320px + 2rem))/2) auto;
+  }
+  .side {
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: 20rem;
+    margin-left: 4rem;
+    order: 2;
+    width: 20rem;
+  }
+  .about {
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+}
+
+#about-hi, #about-i-am, #about-line-2, #about-line-3 {
+  animation-duration: 850ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards;
+}
+
+#about-hi {
+  animation-name: fadeIn;
+}
+
+#about-i-am {
+  animation-delay: 1400ms;
+  animation-name: fadeIn;
+}
+
+#about-line-2 {
+  animation-delay: 4000ms;
+  animation-duration: 1100ms;
+  animation-name: inFromTheLeft;
+  position: relative;
+}
+
+#about-line-3 {
+  animation-delay: 5300ms;
+  animation-name: fadeIn;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(.7)
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes picImage {
+  from {
+    opacity: 0;
+    transform: scale(1.2) translateY(-1rem);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+@keyframes picShadow {
+  from {
+    display: none;
+    opacity: 0;
+    transform: scale(1.2) translateY(4rem);
+  }
+  1% {
+    display: block;
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes inFromTheLeft {
+  from {
+    left: -50vw;
+  }
+  to {
+    left: 0;
+  }
+}
+
+
+.arrow {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  transform: rotate(45deg);
+  align-self: center;
+  bottom: 15px;
+}
+
+.arrow span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  box-sizing: border-box;
+  border: none;
+  border-right: 3px solid #352668;
+  border-bottom: 3px solid #352668;
+  animation: animate 1s linear infinite;
+}
+
+.arrow span:nth-child(1) {
+  top: -30px;
+  left: -30px;
+  animation-delay: 0ms
+}
+
+.arrow span:nth-child(2) {
+  top: -15px;
+  left: -15px;
+  animation-delay: 0.2s
+
+}
+
+.arrow span:nth-child(3) {
+  top: 0px;
+  left: 0px;
+  animation-delay: 0.4s
+}
+
+@keyframes animate {
+  0% {
+    border-color: #bc13fe;
+  }
+  20% {
+    border-color: #bc13fe;
+  }
+  20.1%,100% {
+    border-color:#352668;
+  }
+}
+
+.about-text__glitch {
+  position: absolute;
+  top: calc(var(--border) * -1);
+  left: calc(var(--border) * -1);
+  right: calc(var(--border) * -1);
+  bottom: calc(var(--border) * -1);
+  background: var(--shadow-primary);
+  text-shadow: 2px 2px var(--shadow-primary), -2px -2px var(--shadow-secondary);
+  clip-path: var(--clip);
+  animation: glitch 2s infinite;
+  display: none;
+}
+
+.about-text:hover .about-text__glitch {
+  display: block;
+}
+
+.intro-text__glitch:before {
+  content: '';
+  position: absolute;
+  top: calc(var(--border) * 1);
+  right: calc(var(--border) * 1);
+  bottom: calc(var(--border) * 1);
+  left: calc(var(--border) * 1);
+  clip-path: var(--clip);
+  background: var(--primary);
+  z-index: -1;
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--clip-one);
+  }
+  2%, 8% {
+    clip-path: var(--clip-two);
+    transform: translate(calc(var(--shimmy-distance) * -1%), 0);
+  }
+  6% {
+    clip-path: var(--clip-two);
+    transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+  }
+  9% {
+    clip-path: var(--clip-two);
+    transform: translate(0, 0);
+  }
+  10% {
+    clip-path: var(--clip-three);
+    transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+  }
+  13% {
+    clip-path: var(--clip-three);
+    transform: translate(0, 0);
+  }
+  14%, 21% {
+    clip-path: var(--clip-four);
+    transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+  }
+  25% {
+    clip-path: var(--clip-five);
+    transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+  }
+  30% {
+    clip-path: var(--clip-five);
+    transform: translate(calc(var(--shimmy-distance) * -1%), 0);
+  }
+  35%, 45% {
+    clip-path: var(--clip-six);
+    transform: translate(calc(var(--shimmy-distance) * -1%));
+  }
+  40% {
+    clip-path: var(--clip-six);
+    transform: translate(calc(var(--shimmy-distance) * 1%));
+  }
+  50% {
+    clip-path: var(--clip-six);
+    transform: translate(0, 0);
+  }
+  55% {
+    clip-path: var(--clip-seven);
+    transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+  }
+  60% {
+    clip-path: var(--clip-seven);
+    transform: translate(0, 0);
+  }
+  31%, 61%, 100% {
+    clip-path: var(--clip-four);
+  }
+}
