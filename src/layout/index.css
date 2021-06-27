@@ -1,0 +1,14 @@
+@import url("https://use.typekit.net/dqk5aui.css");
+
+:root {
+  --brand-purple: #5A1AAF;
+  --brand-pink: #fa31f5;
+  --brand-light-pink: #f4b6de;
+  --brand-green: #44d1b4;
+  --brand-yellow: #f2db1f;
+  --blackish: #010101;
+}
+
+html {
+  background-color: var(--brand-green);
+}

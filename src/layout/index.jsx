@@ -1,7 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import config from "../../data/SiteConfig";
-import './minireset.min.css'
+// import './minireset.min.css'
+import './index.css'
 
 export default function MainLayout({ children }) {
   return (

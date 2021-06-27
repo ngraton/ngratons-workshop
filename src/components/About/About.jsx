@@ -1,6 +1,6 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
-import './About.css'
+// import './About.css'
 
 export default function Intro() {
 

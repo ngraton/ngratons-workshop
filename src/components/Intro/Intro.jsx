@@ -4,7 +4,7 @@ function About() {
   return (
     <div className="intro">
       <h1>
-        Edit About component or pages/about.jsx to include your information.
+        Hi, I&apos;m Nic. I build software projects and write stuff.
       </h1>
     </div>
   );
