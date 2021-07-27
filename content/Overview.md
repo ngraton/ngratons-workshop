@@ -10,8 +10,6 @@ tags:
     - overview
 ---
 
-# Overview of the ngraton.dev redesign
-
 This site is getting an extensive makeover based around my concept of a virtual workshop.
 
 In my workshop I have all my projects, my notes, my tools, relevant references, and, ideally, detailed guides from past projects. I want to build the site around these same areas.
