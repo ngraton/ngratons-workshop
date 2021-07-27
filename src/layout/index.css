@@ -4,11 +4,112 @@
   --brand-purple: #5A1AAF;
   --brand-pink: #fa31f5;
   --brand-light-pink: #f4b6de;
-  --brand-green: #44d1b4;
+  --brand-green: #09c83e;
   --brand-yellow: #f2db1f;
   --blackish: #010101;
+  --box-shape: polygon(0 0, calc(100% - 4vw) 0, 100% 4vw, 100% 100%, 4vw 100%, 0% calc(100% - 4vw) );
+  /* --box-cutout: polygon(0 0, 3.75% 0, 3.75% 16px, 275px 16px, 275px 0, 96.25% 0, 100% 10%, 100% 100%, 3.75% 100%, 0% 90% ) */
+}
+
+body {
+  margin: 0;
+}
+
+h1, h2, h3 {
+  color: var(--brand-yellow);
+  font-family: video, serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 html {
-  background-color: var(--brand-green);
+  background-color: var(--blackish);
+  color: var(--brand-green);
+  font-family: unit-rounded, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
+
+.box {
+  background-color: var(--blackish);
+  clip-path: var(--box-shape);
+  display:flex;
+  justify-content: space-between;
+  height: 100%;
+  left: 2px;
+  margin-bottom: -14.5px;
+  position: relative;
+  top: 2px;
+  width: calc(100% - 4px);
+  z-index: 5;
+}
+
+.box-content {
+  font-size: 16px;
+  padding: 64px 4vw;
+  width: 100%;
+}
+
+.brand-logo {
+  margin: 25px 10vw 0;
+  width: 80vw;
+}
+
+.box-border {
+  background-color: var(--brand-pink);
+  clip-path: var(--box-shape);
+  height: fit-content;
+  margin: 50px auto;
+  width: 80vw;
+  z-index: 5;
+}
+
+.box-title {
+  background-color: var(--blackish);
+  border-color: var(--brand-pink);
+  border-style: solid;
+  border-top: none;
+  border-width: 2px;
+  display: block;
+  left: 4vw;
+  height: fit-content;
+  margin-top: 0;
+  margin-bottom: -40.5px;
+  padding: 0 8px;
+  position: relative;
+  width: fit-content;
+  z-index: 20;
+}
+
+.box-footer {
+  background-color: transparent;
+  bottom: -2px;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  width: 76vw;
+}
+
+.box-footer-text {
+  background-color: var(--blackish);
+  border-bottom: none;
+  border-color: var(--brand-pink);
+  border-style: solid;
+  border-width: 2px;
+  max-width: fit-content;
+  padding: 0 8px;
+  z-index: 20;
+  color: var(--brand-yellow);
+  font-family: video, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+}
+
+.post {
+  margin: 50px auto;
+  width: 80vw;
+  max-width: 800px;
+}
+
+

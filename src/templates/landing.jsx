@@ -5,8 +5,8 @@ import Layout from "../layout"
 import PostListing from "../components/PostListing/PostListing"
 import SEO from "../components/SEO/SEO"
 import Intro from "../components/Intro/Intro"
+import Projects from "../components/Projects/Projects"
 import config from "../../data/SiteConfig"
-import './landing.css'
 
 export default function Landing({ data }) {
   const postEdges = data.allMarkdownRemark.edges
@@ -16,6 +16,7 @@ export default function Landing({ data }) {
       <SEO />
       <div className="landing">
         <Intro />
+        <Projects />
         <div className="posts-container">
           <PostListing postEdges={postEdges} />
         </div>

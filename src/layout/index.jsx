@@ -11,6 +11,7 @@ export default function MainLayout({ children }) {
         <meta name="description" content={config.siteDescription} />
         <html lang="en" />
       </Helmet>
+      <img className="brand-logo" src="/logos/logo.svg" alt="ngraton.com logo" />
       {children}
     </div>
   );
