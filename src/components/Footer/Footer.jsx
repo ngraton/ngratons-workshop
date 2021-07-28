@@ -12,7 +12,7 @@ function Footer({ config }) {
         <div>
           <UserLinks config={config} labeled />
         </div>
-        <h4>{copyright}</h4>
+        <h4 className="copyright">{copyright}</h4>
       </div>
     </footer>
   );

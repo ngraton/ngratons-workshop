@@ -112,4 +112,38 @@ html {
   max-width: 800px;
 }
 
+.social-icon, .social-links button {
+  height: 48px;
+  width: 48px;
+}
+
+.post-meta {
+  max-height: 48px;
+}
+
+.footer .notice-container, .post-meta {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer .notice-container {
+  max-width: 90vw;
+  margin: 0 auto 1.5rem;
+}
+
+.react-share__ShareCount {
+  height: 0;
+}
+
+.user-links {
+  align-items: center;
+}
+
+.user-links button {
+  margin: 0 8px;
+}
+
+.copyright {
+  margin: 0;
+}
 
