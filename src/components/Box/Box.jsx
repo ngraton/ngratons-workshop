@@ -3,7 +3,7 @@ import React from "react";
 function Box({ title, children, footer}) {
   return (
     <div className="box-border">
-      <h1 className="box-title">
+      <h1 className="box-title neon">
         {title}
       </h1>
       <div className="box">
