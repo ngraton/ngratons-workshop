@@ -7,8 +7,7 @@
   --brand-green: #09c83e;
   --brand-yellow: #f2db1f;
   --blackish: #010101;
-  --box-shape: polygon(0 0, calc(100% - 4vw) 0, 100% 4vw, 100% 100%, 4vw 100%, 0% calc(100% - 4vw) );
-  /* --box-cutout: polygon(0 0, 3.75% 0, 3.75% 16px, 275px 16px, 275px 0, 96.25% 0, 100% 10%, 100% 100%, 3.75% 100%, 0% 90% ) */
+  --box-shape: polygon(0 0, calc(100% - 6vw) 0, calc(100% - 2vw) 4vw, calc(100% - 2vw) calc(4vw + 64px), 100% calc(6vw + 64px), 100% 100%, 4vw 100%, 0% calc(100% - 4vw) );
 }
 
 body {
@@ -20,6 +19,10 @@ h1, h2, h3 {
   font-family: video, serif;
   font-weight: 400;
   font-style: normal;
+}
+
+h1 {
+  font-size: 32px;
 }
 
 html {
@@ -35,9 +38,9 @@ html {
   clip-path: var(--box-shape);
   display:flex;
   justify-content: space-between;
-  height: 100%;
+  height: calc(100%);
   left: 2px;
-  margin-bottom: -14.5px;
+  margin-bottom: -14px;
   position: relative;
   top: 2px;
   width: calc(100% - 4px);
@@ -46,13 +49,13 @@ html {
 
 .box-content {
   font-size: 16px;
-  padding: 64px 4vw;
+  padding: 64px 4vw 48px;
   width: 100%;
 }
 
 .brand-logo {
-  margin: 25px 10vw 0;
-  width: 80vw;
+  margin: 25px 15vw 0;
+  width: 70vw;
 }
 
 .box-border {
@@ -92,8 +95,8 @@ html {
 
 .box-footer-text {
   background-color: var(--blackish);
-  border-bottom: none;
   border-color: var(--brand-pink);
+  border-bottom-color: var(--blackish);
   border-style: solid;
   border-width: 2px;
   max-width: fit-content;
@@ -118,6 +121,7 @@ html {
 }
 
 .post-meta {
+  margin-top: 48px;
   max-height: 48px;
 }
 
@@ -140,10 +144,67 @@ html {
 }
 
 .user-links button {
-  margin: 0 8px;
+  margin-right: 8px;
 }
 
 .copyright {
   margin: 0;
 }
 
+
+/* the testing grounds */
+
+.neon {
+
+  text-shadow: 0 0 3px #F4BD0A;
+
+  animation: neon 3s ease-in-out infinite;
+
+}
+
+@keyframes neon {
+
+  0%, 100% {
+
+    text-shadow: 0 0 5px #FA1C16, 0 0 7px #FA1C16, 0 0 8px #FA1C16, 0 0 8px #FA1C16, 0 0 .40px #FED128, .50px .50px .10px #806914;
+
+    color: #FFFC00;
+
+  }
+
+  50% {
+
+    text-shadow: 0 0 .50px #800E0B, 0 0 1.50px #800E0B, 0 0 8px #800E0B, 0 0 8px #800E0B, 0 0 .20px #800E0B, .50px .50px .10px #40340A;
+
+    color: #f2db1f;
+
+  }
+
+}
+
+.box {
+  background-image: radial-gradient(var(--brand-purple) 1px, transparent 0);
+  background-size: 5px 5px;
+  background-position: -13px -3px;
+}
+
+button {
+  cursor: pointer;
+}
+
+button.tag {
+  background-color: var(--brand-purple);
+  border-radius: 0;
+  border-width: 2;
+  border-top: none;
+  border-left: none;
+  /* border-bottom: none; */
+  border-color: var(--brand-light-pink);
+  color: var(--brand-yellow);
+  font-family: video-cond, serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 4px;
+  margin-left: 8px;
+  clip-path: polygon(0 0, 0 calc(100% - 8px), 8px 100%, 100% 100%, 100% 0);
+}
