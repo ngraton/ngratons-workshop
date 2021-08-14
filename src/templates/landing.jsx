@@ -26,9 +26,38 @@ export default function Landing({ data }) {
 }
 
 /* eslint no-undef: "off" */
+// export const pageQuery = graphql`
+//   query LandingQuery {
+//     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+//       edges {
+//         node {
+//           fields {
+//             slug
+//             date
+//           }
+//           excerpt
+//           timeToRead
+//           frontmatter {
+//             title
+//             tags
+//             cover
+//             date
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
+
+/* eslint no-undef: "off" */
 export const pageQuery = graphql`
-  query LandingQuery {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+  query LandingQuery($category: String) {
+    allMarkdownRemark(
+      limit: 1000
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { category: { eq: $category } } }
+    ) {
+      totalCount
       edges {
         node {
           fields {
@@ -47,4 +76,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

@@ -28,8 +28,8 @@ export default function PostTemplate({ data, pageContext }) {
           {/* eslint-disable-next-line react/no-danger */}
           <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
         <div className="post-meta">
-          <PostTags tags={post.tags} />
           <SocialLinks postPath={slug} postNode={postNode} />
+          <PostTags tags={post.tags} />
         </div>
         </Box>
         <Footer config={config} />
