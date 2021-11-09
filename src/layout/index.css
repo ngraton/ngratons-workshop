@@ -7,7 +7,7 @@
   --brand-green: #09c83e;
   --brand-yellow: #f2db1f;
   --blackish: #010101;
-  --box-shape: polygon(0 0, calc(100% - 6vw) 0, calc(100% - 2vw) 4vw, calc(100% - 2vw) calc(4vw + 64px), 100% calc(6vw + 64px), 100% 100%, 4vw 100%, 0% calc(100% - 4vw) );
+  --box-shape: polygon(0 0, calc(100% - 4vw) 0, 100% 4vw, 100% 100%, 4vw 100%, 0% calc(100% - 4vw) );
 }
 
 body {
