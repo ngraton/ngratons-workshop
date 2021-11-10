@@ -3,7 +3,7 @@ title: "Overview of the ngraton.dev redesign"
 cover: "5.jpg"
 category: "project"
 project: "ngraton.dev"
-date: "2018-03-01"
+date: "2021-03-01"
 slug: "ngraton.dev overview"
 tags:
     - ngraton.dev
@@ -14,7 +14,7 @@ This site is getting an extensive makeover based around my concept of a virtual 
 
 In my workshop I have all my projects, my notes, my tools, relevant references, and, ideally, detailed guides from past projects. I want to build the site around these same areas.
 
-Like a workshop, this site will be organized around, heck its entire reason of being is to work on, projects. I'd like a section for every project I'm working on, completed projects will be turned into guides more to follow on that.
+Like a workshop, this site will be organized around projects. Every project I'm working on will have its own section; completed projects will be turned into guides.
 
 ## Why?
 
