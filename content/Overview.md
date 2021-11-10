@@ -26,7 +26,7 @@ Redesign based around the idea of a workshop
 - show your work
 	- references and tools linked to each project and have their own page
 	- notes (including these) up on the site and tied to their respecive projects
-	- code in projects written with an audience in mind (comments and explanations)
+	- code in projects written with an audience in mind
 	- atomic commits
 - still have a blog
 	- talk about whatever is on my mind, what i'm working on, etc..
