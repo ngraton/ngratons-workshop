@@ -1,5 +1,5 @@
 ---
-title: "Overview of the ngraton.dev redesign"
+title: "overview of the ngraton.dev redesign"
 cover: "5.jpg"
 category: "project"
 project: "ngraton.dev"
@@ -28,6 +28,6 @@ Redesign based around the idea of a workshop
 	- notes (including these) up on the site and tied to their respecive projects
 	- code in projects written with an audience in mind
 	- atomic commits
-- still have a blog
+- have a blog
 	- talk about whatever is on my mind, what i'm working on, etc..
 	- built out of notes (many) but writen as a longer peice
