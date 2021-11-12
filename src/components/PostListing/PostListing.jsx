@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 
 function PostListing({ postEdges }) {
-  const postList = [];
+  const postList = []
   postEdges.forEach((postEdge) => {
     postList.push({
       path: postEdge.node.fields.slug,
@@ -12,13 +12,12 @@ function PostListing({ postEdges }) {
       date: postEdge.node.fields.date,
       excerpt: postEdge.node.excerpt,
       timeToRead: postEdge.node.timeToRead,
-    });
-  });
+    })
+  })
 
   return (
     <div>
       {
-        /* Your post list here. */
         postList.map((post) => (
           <Link to={post.path} key={post.title}>
             <h3>{post.title}</h3>
@@ -26,7 +25,7 @@ function PostListing({ postEdges }) {
         ))
       }
     </div>
-  );
+  )
 }
 
 export default PostListing;
