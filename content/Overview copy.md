@@ -1,8 +1,8 @@
 ---
-title: "overview of the ngraton.dev redesign"
+title: "testing of the ngraton.dev redesign"
 cover: "5.jpg"
-category: "notes"
-project: "ngraton.dev"
+category: "project"
+project: "made up project"
 date: "2021-03-01"
 slug: "ngraton.dev overview"
 tags:
