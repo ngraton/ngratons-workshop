@@ -28,4 +28,4 @@ function PostListing({ postEdges }) {
   )
 }
 
-export default PostListing;
+export default PostListing
